@@ -9,7 +9,9 @@ class App extends React.Component {
     return (
       <div className='app-container'>
 	    <Navbar history={this.props.history} />
+	    <div style={{marginTop: 50}}>
         {this.props.children}
+        </div>
       </div>
     );
   }

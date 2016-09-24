@@ -7370,10 +7370,10 @@ footer .thumb-md:hover {
   height: 100px;
   z-index: 10000;
   background-color: black;
-  -webkit-transition: width 2s, height 2s, -webkit-clip-path 1.2s ease;
-  transition: width 2s, height 2s, -webkit-clip-path 1.2s ease;
-  transition: width 2s, height 2s, clip-path 1.2s ease;
-  transition: width 2s, height 2s, clip-path 1.2s ease, -webkit-clip-path 1.2s ease;
+  -webkit-transition: width 2s, height 2s, -webkit-clip-path 0.8s;
+  transition: width 2s, height 2s, -webkit-clip-path 0.8s;
+  transition: width 2s, height 2s, clip-path 0.8s;
+  transition: width 2s, height 2s, clip-path 0.8s, -webkit-clip-path 0.8s;
 }
 #menu.open {
   position: fixed;
@@ -7384,10 +7384,10 @@ footer .thumb-md:hover {
   width: 150%;
   height: 150%;
   background-color: black;
-  -webkit-transition: width 0.2s, height 0.2s, -webkit-clip-path 1.2s ease;
-  transition: width 0.2s, height 0.2s, -webkit-clip-path 1.2s ease;
-  transition: width 0.2s, height 0.2s, clip-path 1.2s ease;
-  transition: width 0.2s, height 0.2s, clip-path 1.2s ease, -webkit-clip-path 1.2s ease;
+  -webkit-transition: width 0.2s, height 0.2s, -webkit-clip-path 0.8s;
+  transition: width 0.2s, height 0.2s, -webkit-clip-path 0.8s;
+  transition: width 0.2s, height 0.2s, clip-path 0.8s;
+  transition: width 0.2s, height 0.2s, clip-path 0.8s, -webkit-clip-path 0.8s;
 }
 /*
  * Character profile page styles.

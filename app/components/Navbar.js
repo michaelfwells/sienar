@@ -66,7 +66,7 @@ class Navbar extends React.Component {
 
       return (
 
-      <nav className='navbar navbar-default navbar-static-top'>
+      <nav className='navbar navbar-default navbar-static-top' style={{position: 'fixed', width: '100%', top: 0, left:0}}>
         <div className='navbar-header' >
             <div className='navbar-border'></div>
                 <Link to='/' className='navbar-brand'>
@@ -83,7 +83,7 @@ class Navbar extends React.Component {
                 <ul style={{paddingRight: 30}}>
 <li style={{fontSize: 60}} onClick={this.handleClick}>&times;</li>
                 <li>New Fleet</li>
-                <li><img src={'/rebelLogo.png'} /><img src={'/imperialLogo.png'} /></li>
+                <li><img style={{width: 100, marginRight: 20}} src={'/img/rebels-white.svg'} /><img style={{width: 100}} src={'/img/empire-white.svg'} /></li>
                 <li>Saved Fleets</li>
                 <li>My Collection</li>
                 <li>Library</li>

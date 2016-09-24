@@ -789,7 +789,11 @@ var App = function (_React$Component) {
         'div',
         { className: 'app-container' },
         _react2.default.createElement(_Navbar2.default, { history: this.props.history }),
-        this.props.children
+        _react2.default.createElement(
+          'div',
+          { style: { marginTop: 50 } },
+          this.props.children
+        )
       );
     }
   }]);
@@ -1148,7 +1152,7 @@ var Navbar = function (_React$Component) {
 
       return _react2.default.createElement(
         'nav',
-        { className: 'navbar navbar-default navbar-static-top' },
+        { className: 'navbar navbar-default navbar-static-top', style: { position: 'fixed', width: '100%', top: 0, left: 0 } },
         _react2.default.createElement(
           'div',
           { className: 'navbar-header' },
@@ -1185,8 +1189,8 @@ var Navbar = function (_React$Component) {
                 _react2.default.createElement(
                   'li',
                   null,
-                  _react2.default.createElement('img', { src: '/rebelLogo.png' }),
-                  _react2.default.createElement('img', { src: '/imperialLogo.png' })
+                  _react2.default.createElement('img', { style: { width: 100, marginRight: 20 }, src: '/img/rebels-white.svg' }),
+                  _react2.default.createElement('img', { style: { width: 100 }, src: '/img/empire-white.svg' })
                 ),
                 _react2.default.createElement(
                   'li',
