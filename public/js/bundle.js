@@ -19,7 +19,7 @@ var AddShipActions = function () {
   function AddShipActions() {
     _classCallCheck(this, AddShipActions);
 
-    this.generateActions('addShipSuccess', 'addShipFail', 'updateName', 'updateGender', 'invalidName', 'invalidGender');
+    this.generateActions('addShipSuccess', 'addShipFail', 'updateName', 'invalidName', 'updateFaction', 'updateCommand', 'updateSquadron', 'updateEngineering', 'updateFrontShield', 'updateRightShield', 'updateRearShield', 'updateLeftShield', 'updateMovement', 'updateRedirect', 'updateEvade', 'updateBrace', 'updateScatter', 'updateContain', 'updateLeftRed', 'updateLeftBlue', 'updateLeftBlack', 'updateRearRed', 'updateRearBlue', 'updateRearBlack', 'updatetRightRed', 'updateRightBlue', 'updateRightBlack', 'updatetFrontRed', 'updateFrontBlue', 'updateFrontBlack', 'updateAntiSquadron', 'updateHullPoints', 'updateBaseCost', 'updateCommander', 'updateDefensiveRetrofit', 'updateIonCanons', 'updateOffensiveRetrofit', 'updateOfficer', 'updateOrdinance', 'updateSupportTeam', 'updateTitle', 'updateTurbolaser', 'updateWeaponsTeam');
   }
 
   _createClass(AddShipActions, [{
@@ -27,6 +27,7 @@ var AddShipActions = function () {
     value: function addShip(shipInfo) {
       var _this = this;
 
+      console.log('test');
       $.ajax({
         type: 'POST',
         url: '/api/Ships',
@@ -220,6 +221,7 @@ var AddShip = function (_React$Component) {
   }, {
     key: 'handleSubmit',
     value: function handleSubmit(event) {
+      console.log('handle submit');
       event.preventDefault();
 
       var ship = {
@@ -253,6 +255,7 @@ var AddShip = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
+      var handleSubmit = this.handleSubmit;
       return _react2.default.createElement(
         'div',
         { className: 'container' },
@@ -723,7 +726,7 @@ var AddShip = function (_React$Component) {
                   ),
                   _react2.default.createElement(
                     'button',
-                    { type: 'submit', className: 'btn btn-primary' },
+                    { type: 'submit', className: 'btn btn-primary', onSubmit: handleSubmit },
                     'Submit'
                   )
                 )
@@ -1379,6 +1382,7 @@ var AddShipStore = function () {
       this.name = event.target.value;
       this.nameValidationState = '';
       this.helpBlock = '';
+      console.log(this.name);
     }
   }, {
     key: 'onUpdateFaction',

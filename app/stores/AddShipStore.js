@@ -57,6 +57,7 @@ class AddShipStore {
     this.name = event.target.value;
     this.nameValidationState = '';
     this.helpBlock = '';
+    console.log(this.name);
   }
 
   onUpdateFaction(event) {

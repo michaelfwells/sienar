@@ -22,6 +22,7 @@ class AddShip extends React.Component {
   }
 
   handleSubmit(event) {
+    console.log('handle submit');
       event.preventDefault();
 
     var ship = {
@@ -55,6 +56,7 @@ class AddShip extends React.Component {
   }
 
   render() {
+    var handleSubmit = this.handleSubmit;
     return (
       <div className='container'>
         <div className='row flipInX animated'>
@@ -278,7 +280,7 @@ class AddShip extends React.Component {
                     <input type='checkbox' className='form-control' ref='commanderTextField' value={this.state.upgrades.weaponsTeam}
                     onChange={AddShipActions.updateWeaponsTeam} />
                   </div>
-                  <button type='submit' className='btn btn-primary'>Submit</button>
+                  <button type='submit' className='btn btn-primary' onSubmit={handleSubmit}>Submit</button>
                 </form>
               </div>
             </div>

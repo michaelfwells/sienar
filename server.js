@@ -38,8 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Adds new ship to the database.
  */
 app.post('/api/ships', function (req, res, next) {
-    var info = req.body;
 
+    var info = req.body;
+console.log(info);
     var ship = new Ship({
         name: info.name,
         faction: info.faction,
@@ -56,17 +57,17 @@ app.post('/api/ships', function (req, res, next) {
         brace: info.brace,
         Scatter: info.scatter,
         contain: info.contain,
-        frontAttackDice: [info.frontDice.red, info.frontDice.blue, info.frontDice.black],
-        rightAttackDice: [info.rightDice.red, info.rightDice.blue, info.rightDice.black],
-        rearAttackDice: [info.rearDice.red, info.rearDice.blue, info.rearDice.black],
-        leftAttackDice: [info.leftDice.red, info.leftDice.blue, info.leftDice.black],
+        frontAttackDice: info.frontAttackDice,
+        rightAttackDice: info.rightAttackDice,
+        rearAttackDice: info.rearAttackDice,
+        leftAttackDice: info.leftAttackDice,
         antiSquadronDice: info.antiSquadron,
         hullPoints: info.hullPoints,
         baseCost: info.cost
     });
 
     ship.save(function (err) {
-        res.send({ message: shipName + ' has been added successfully!' });
+        res.send({ message: ship.name + ' has been added successfully!' });
     });                  
 });
 
